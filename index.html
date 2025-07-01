@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <ul class="background-particles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
     <div class="clock-container">
       <svg class="progress-ring" width="240" height="240">
         <circle
@@ -24,9 +36,9 @@
       </svg>
       <div class="clock">
         <div class="time">
-          <span id="hours">00</span>
+          <span class="flip"><span id="hours">00</span></span>
           <span class="divider">:</span>
-          <span id="minutes">00</span>
+          <span class="flip"><span id="minutes">00</span></span>
           <span id="ampm">AM</span>
         </div>
 
@@ -36,6 +48,29 @@
           <span id="day">MON</span>
         </div>
       </div>
+      <button
+        id="music-btn"
+        class="toggle-music"
+        onclick="toggleMusic()"
+        aria-label="Toggle Music"
+        title="Play/Pause Music"
+      >
+        <svg
+          class="music-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+      </button>
     </div>
     <button
       class="toggle-theme"
@@ -63,8 +98,13 @@
         <path d="M12 19.6l8.85 -8.85"></path>
       </svg>
     </button>
+    <audio id="background-audio" loop>
+      <source src="./assets/music_1.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
 
     <footer>Crafted with 💻 & ❤️ by Sejal — Stay productive!</footer>
+
     <script src="index.js"></script>
   </body>
 </html>
