@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Spot</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="clock-container">
+      <svg class="progress-ring" width="240" height="240">
+        <circle
+          class="progress-ring__circle"
+          stroke-width="4"
+          fill="transparent"
+          r="110"
+          cx="120"
+          cy="120"
+        />
+      </svg>
+      <div class="clock">
+        <div class="time">
+          <span id="hours">00</span>
+          <span class="divider">:</span>
+          <span id="minutes">00</span>
+          <span id="ampm">AM</span>
+        </div>
+
+        <div class="info">
+          <span id="date">01</span>
+          <span id="month">JAN</span>
+          <span id="day">MON</span>
+        </div>
+      </div>
+    </div>
+    <button
+      class="toggle-theme"
+      onclick="toggleTheme()"
+      aria-label="Toggle Theme"
+      title="Toggle Theme"
+    >
+      <svg
+        class="theme-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+        <path d="M12 3l0 18"></path>
+        <path d="M12 9l4.65 -4.65"></path>
+        <path d="M12 14.3l7.37 -7.37"></path>
+        <path d="M12 19.6l8.85 -8.85"></path>
+      </svg>
+    </button>
+
+    <footer>Crafted with 💻 & ❤️ by Sejal — Stay productive!</footer>
+    <script src="index.js"></script>
+  </body>
+</html>
